@@ -1,9 +1,9 @@
 package Seminar2.Classes;
 
+// новый класс наследуется от Actor
 public class ActionClient extends Actor {
-  private boolean isTakeOrder;
-  private boolean isMakeOrder;
-  private int clientId;
+  public int clientId;
+
   public String actionName;
 
   public ActionClient(String name, int clientId, String actionName) {
@@ -44,4 +44,11 @@ public class ActionClient extends Actor {
     return this;
   }
 
+  public int getClientId() {
+    return clientId;
+  }
+
+  public void setClientId(int clientId) {
+    this.clientId = clientId;
+  }
 }

@@ -43,6 +43,7 @@ public class Market implements iMarketBehaviour, iQueueBehaviour, iReturnOrder {
   public void update() {
     takeOrder();
     giveOrder();
+    returnOrder();
     releaseFromQueue();
   }
 
@@ -53,7 +54,6 @@ public class Market implements iMarketBehaviour, iQueueBehaviour, iReturnOrder {
         actor.setTakeOrder(true);
         System.out.println(actor.getActor().getName() + " клиент получил свой заказ ");
       }
-      returnOrder();
     }
   }
 
@@ -88,8 +88,6 @@ public class Market implements iMarketBehaviour, iQueueBehaviour, iReturnOrder {
         actor.setTakeOrder(true);
         System.out.println(actor.getActor().getName() + " клиент вернул свой заказ ");
       }
-
     }
-
   }
 }
